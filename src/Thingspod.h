@@ -15,7 +15,7 @@
 #include "RPC.h"
 
 #define DEFAULT_PAYLOAD_SIZE 64
-#define DEFAULT_FIELDS_ELEMENT 8
+#define DEFAULT_FIELDS_ELEMENT 32
 
 constexpr char *DEFAULT_CLIENT_ID PROGMEM = "thingspodDevice";
 

@@ -18,7 +18,7 @@
 #define WIFI_SSID "Ronika"
 #define WIFI_PASSWORD "RonikaCoLtdRouter2022Q3"
 
-const char *TOKEN = "OTADevice"; //nullptr;
+const char *TOKEN = "OTADevice";
 #define THINGSPOD_SERVER "platform.r9k.ir"
 #define THINGSPOD_MQTT_PORT 30883
 
@@ -28,7 +28,7 @@ WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 Thingspod thingspod(wifiClient, &mqttClient);
 
-const std::array<const char *, 2U> attrKey{"sobhan", "ali"};
+const std::array<const char *, 2U> attrKey{"attr1", "attr2"};
 
 class Logger;
 
@@ -137,7 +137,7 @@ void loop()
 
   if (!thingspod.connected())
   {
-    // Connect to the ThingsBoard
+    // Connect to the Thingspod
     Serial.print("Connecting to: ");
     Serial.print(THINGSPOD_SERVER);
     Serial.print(" with token ");
@@ -161,10 +161,10 @@ void loop()
       Serial.println("Failed to connect");
       return;
     }
-    // thingspod.RPCSubscribe(rpc);
-    // thingspod.sharedAttributesSubscribe(sharedAttrRequest);
-    // thingspod.sendTelemetryInt("testData", 10);
-    // thingspod.sendAttributeInt("attr", 20);
+    thingspod.RPCSubscribe(rpc);
+    thingspod.sharedAttributesSubscribe(sharedAttrRequest);
+    thingspod.sendTelemetryInt("dataKey", 10);
+    thingspod.sendAttributeInt("attr", 20);
     thingspod.startFirmwareUpdate(CURRENT_FIRMWARE_TITLE, CURRENT_FIRMWARE_VERSION, OTAUpdate);
   }
 
