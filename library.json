@@ -4,7 +4,7 @@
     "description": "A client library for Thingspod IoT platform.",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/thingspod/arduino-sdk.git"
     },
     "version": "1.0.0",
     "examples": "examples/*/*.ino",
