@@ -1,9 +1,8 @@
 ## Arduino SDK for Thingspod IoT Platform
 
 ### Dependencies
-- ArduinoJson
-- PubSubClient
-- MD5Builder
+- [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
+- [PubSubClient](https://github.com/knolleary/pubsubclient)
 
 ### Usage
 * Download source code and extract to arduino library folder
