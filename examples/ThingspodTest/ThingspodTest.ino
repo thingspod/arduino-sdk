@@ -19,8 +19,8 @@
 #define WIFI_PASSWORD "RonikaCoLtdRouter2022Q3"
 
 const char *TOKEN = "OTADevice";
-#define THINGSPOD_SERVER "platform.r9k.ir"
-#define THINGSPOD_MQTT_PORT 30883
+#define THINGSPOD_SERVER "thingspod.com"
+#define THINGSPOD_MQTT_PORT 31883
 
 #define SERIAL_DEBUG_BAUD 115200
 
