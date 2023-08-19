@@ -39,7 +39,7 @@ void setup()
   Serial.begin(SERIAL_DEBUG_BAUD);
   Serial.println();
   initWifi();
-  mqttClient.setServer(THINGSPOD_SERVER, 30883);
+  mqttClient.setServer(THINGSPOD_SERVER, THINGSPOD_MQTT_PORT);
   mqttClient.setCallback(mqttCallback);
 }
 
