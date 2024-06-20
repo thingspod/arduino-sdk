@@ -296,12 +296,12 @@ public:
 	inline const bool startFirmwareUpdate(const char *currFwTitle, const char *currFwVersion, const std::function<void(const bool &)> &updatedCallback)
 	{
 
-		this->firmware.startFirmwareUpdate(currFwTitle, currFwVersion, updatedCallback);
+		return this->firmware.startFirmwareUpdate(currFwTitle, currFwVersion, updatedCallback);
 	}
 
 	inline const bool unsubscribeFromOTAFirmware()
 	{
-		this->firmware.unsubscribeFromOTAFirmware();
+		return this->firmware.unsubscribeFromOTAFirmware();
 	}
 
 #endif
